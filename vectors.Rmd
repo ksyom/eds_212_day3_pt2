@@ -40,7 +40,7 @@ class(pika)
 scalar_pika <- 5.2 * pika
 #will return every element in the vector multiplied by 5.2
 ```
-When you want the result of an object, you have to call for it in your code, ex. I have to type scalar_pika in a code chunk to actually have the results show up when I knit
+When you want the values of an object, you have to call for it in your code, ex. I have to type scalar_pika in a code chunk to actually have the results show up when I knit
 
 ```{r}
 bananas <- c(1, 2, 3)
@@ -55,9 +55,43 @@ bananas %*% apples
 #%*% gives you the dot product
 ```
 
+### Matrices - how to make them
+```{r}
+my_values <- seq(from = 1, to = 10)
+#if you don't put a "by" value for the seq() command, it'll assume you're incrementing by 1
 
+#if instead you want to tell it the quantity of values you want, use length
 
+#my_values_length_ex <- seq(from = 1, to = 10, length = 50)
+#my_values_length_ex
 
+#this will produce 50 equally spaced values starting from your from number and going to your to number
+
+my_matrix <- matrix(data = my_values, nrow = 2, ncol = 5, byrow = TRUE)
+my_matrix
+#data, how many rows i want, how many columns i want, byrow = TRUE fills first row then moves to second row once it's filled, read matrix under Help tab
+
+#if number of values doesn't match up with number of rows and columns, will produce error message
+
+5*my_matrix
+
+#make sure to regularly check the class as a troubleshooting starting point by class(object)
+
+class(my_matrix)
+```
+
+```{r}
+glimpse(penguins)
+#shows previews of the rows and can see the annotated versions of classes of my row, ex. <fct> is factor
+```
+
+The purpose of terminal is universal language that runs commands without the use of a development environment
+
+### Terminal commands:
+
+pwd = print working directory - should tell you which directory you're working in
+git status = tells us the modified files that haven't been staged
+git add -A = stages all modified files (equivalent of checking the Staged boxes of every modified file) (doesn't look like it - it won't actually check the Staged boxes)
 
 
 
