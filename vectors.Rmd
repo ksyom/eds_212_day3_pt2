@@ -1,0 +1,65 @@
+---
+title: "Creating and Working with Vectors"
+author: "kimberly yom"
+date: "2022-08-03"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+When you make an R markdown file, the title you give it is different from the file name.
+
+```{r}
+library(tidyverse)
+#tells us the packages it's loading
+library(palmerpenguins)
+```
+
+## Let's make some vectors!
+
+```{r}
+marmots <- c("blue", "green", 4, "yellow")
+
+#I can now see the object "marmots" in the environment window
+# in vectors, every element needs to be the same class, ex. characters vs. integers, so even though 4 is a number not in quotes, it'll get processed as a character bc chr are the most universal, since R makes assumptions on what class you want.
+```
+
+Let's check the class
+
+```{r}
+class(marmots)
+```
+
+```{r}
+pika <- c(12.4, 6.8, 2.9, 8.8, 8.5)
+class(pika)
+# scalar multiplier
+
+scalar_pika <- 5.2 * pika
+#will return every element in the vector multiplied by 5.2
+```
+When you want the result of an object, you have to call for it in your code, ex. I have to type scalar_pika in a code chunk to actually have the results show up when I knit
+
+```{r}
+bananas <- c(1, 2, 3)
+apples <- c(6, 7, 8)
+# can do math with them since they're equal lengths
+
+bananas + apples
+
+bananas - apples
+
+bananas %*% apples
+#%*% gives you the dot product
+```
+
+
+
+
+
+
+
+
+
