@@ -40,6 +40,7 @@ class(pika)
 scalar_pika <- 5.2 * pika
 #will return every element in the vector multiplied by 5.2
 ```
+
 When you want the values of an object, you have to call for it in your code, ex. I have to type scalar_pika in a code chunk to actually have the results show up when I knit
 
 ```{r}
@@ -56,6 +57,7 @@ bananas %*% apples
 ```
 
 ### Matrices - how to make them
+
 ```{r}
 my_values <- seq(from = 1, to = 10)
 #if you don't put a "by" value for the seq() command, it'll assume you're incrementing by 1
@@ -85,15 +87,19 @@ glimpse(penguins)
 #shows previews of the rows and can see the annotated versions of classes of my row, ex. <fct> is factor
 ```
 
-The purpose of terminal is universal language that runs commands without the use of a development environment
+The purpose of terminal is universal language that runs commands without the use of a development environment. You can work in the command line for any environment and save your work to git
 
-### Terminal commands:
+Working in console vs. terminal: Your console is giving commands to your DE, terminal is giving commands to your computer
 
-pwd = print working directory - should tell you which directory you're working in
-git status = tells us the modified files that haven't been staged
-git add -A = stages all modified files (equivalent of checking the Staged boxes of every modified file) (doesn't look like it - it won't actually check the Staged boxes)
+## Terminal commands (commands are case-sensitive):
+Input these commands in the terminal tab
 
+**pwd** = print working directory - should tell you which directory you're working in
 
+**git status** = tells us the modified files that haven't been staged
 
+**git add -A** = stages all modified files (equivalent of checking the Staged boxes of every modified file) (doesn't look like it - it won't actually check the Staged boxes)
 
+**git commit -m "commit message"** = commits the files with the commit message in the quotes
 
+**git push** = pushes files to the remote repo
